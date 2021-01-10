@@ -1,7 +1,11 @@
 import deepOmit from '../deepOmit';
 
+class TestClass {}
+
 describe('deepOmit', () => {
   it('omits key and keeps extraneous properties', () => {
+    const testClass = new TestClass();
+
     const obj = {
       __typename: 'Test',
       a: 'a',
@@ -18,6 +22,7 @@ describe('deepOmit', () => {
             a: 'a',
             b: 0,
             c: null as null,
+            d: testClass,
           },
         ],
       },
@@ -36,6 +41,7 @@ describe('deepOmit', () => {
             a: 'a',
             b: 0,
             c: null as null,
+            d: testClass,
           },
         ],
       },

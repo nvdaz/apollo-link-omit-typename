@@ -1,13 +1,13 @@
 export default function deepOmit(value: unknown, omitKey: string): any {
-  if (value === null || value === undefined) {
-    return value;
-  }
-
   if (Array.isArray(value)) {
     return value.map((el) => deepOmit(el, omitKey));
   }
 
-  if (typeof value === 'object') {
+  if (
+    typeof value === 'object' &&
+    value !== null &&
+    value.constructor === Object
+  ) {
     return Object.fromEntries(
       Object.entries(value)
         .filter(([key]) => omitKey !== key)
