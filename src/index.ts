@@ -3,7 +3,7 @@ import deepOmit from './deepOmit';
 
 export default class OmitTypenameLink extends ApolloLink {
   request(operation: Operation, forward: NextLink) {
-    forward({
+    return forward({
       ...operation,
       variables: deepOmit(operation.variables, '__typename'),
     });
