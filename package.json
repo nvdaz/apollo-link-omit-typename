@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-omit-typename",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Apollo Link that omits typename fields from operation variables",
   "main": "dist/main/index.js",
   "types": "dist/main/index.d.ts",
