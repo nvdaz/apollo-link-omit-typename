@@ -2,8 +2,8 @@
   "name": "apollo-link-omit-typename",
   "version": "1.0.0",
   "description": "Apollo Link that omits typename fields from operation variables",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/main/index.js",
+  "types": "dist/main/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
     "typescript": "^4.1.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "yarn run build:cjs && yarn run build:esm",
     "type-check": "tsc --noEmit",
     "test": "jest --coverage"
   },

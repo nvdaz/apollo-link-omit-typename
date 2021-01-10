@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "esnext",
       "dom"
@@ -15,8 +15,11 @@
     "skipLibCheck": true,
     "noImplicitAny": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist/main"
   },
   "include": ["src"],
-  "exclude": ["src/**/__tests__/*"]
+  "exclude": [
+    "node_modules",
+    "src/**/__tests__/*"
+  ]
 }
