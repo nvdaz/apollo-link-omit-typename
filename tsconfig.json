@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
@@ -18,8 +15,5 @@
     "outDir": "dist/main"
   },
   "include": ["src"],
-  "exclude": [
-    "node_modules",
-    "src/**/__tests__/*"
-  ]
+  "exclude": ["node_modules", "src/**/__tests__/*.ts"]
 }
