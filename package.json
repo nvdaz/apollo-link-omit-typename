@@ -11,8 +11,7 @@
     "url": "nvdaz/apollo-link-omit-typename"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.6",
-    "tslib": "^2.1.0"
+    "@apollo/client": "^3.3.6"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
@@ -27,11 +26,12 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "yarn run build:cjs && yarn run build:esm",
     "type-check": "tsc --noEmit",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.ts",
       "!src/**/__tests__/*.ts"
