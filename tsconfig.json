@@ -5,7 +5,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
-    "importHelpers": true,
     "removeComments": true,
     "isolatedModules": true,
     "sourceMap": true,
