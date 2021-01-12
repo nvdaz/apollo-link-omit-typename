@@ -10,10 +10,12 @@
     "type": "git",
     "url": "nvdaz/apollo-link-omit-typename"
   },
-  "dependencies": {
-    "@apollo/client": "^3.3.6"
+  "peerDependencies": {
+    "@apollo/client": "^3.3.6",
+    "graphql": "^15.0.0"
   },
   "devDependencies": {
+    "@apollo/client": "^3.3.6",
     "@types/jest": "^26.0.20",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
